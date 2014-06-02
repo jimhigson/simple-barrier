@@ -4,7 +4,7 @@ simple-barrier
 A very minimalist, callback-based implementation of the Barrier flow control pattern in Javascript
 
 This is useful for when you want to wait for several things to execute in parallel,
-then handle the results all together.
+then handle the results together.
 
 For people too lazy to learn [async](https://github.com/caolan/async).
 
