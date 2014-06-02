@@ -1,0 +1,26 @@
+{
+  "name": "simple-barrier",
+  "version": "1.0.0",
+  "description": "An ultra-simple implementation of the Barrier flow control pattern in Javascript",
+  "main": "src/simple-barrier.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jimhigson/simple-barrier.git"
+  },
+  "keywords": [
+    "barrier",
+    "flow",
+    "parallel",
+    "async",
+    "asynchronous"
+  ],
+  "author": "Jim Higson <jim.higson@gmail.com>",
+  "license": "2 clause BSD",
+  "bugs": {
+    "url": "https://github.com/jimhigson/simple-barrier/issues"
+  },
+  "homepage": "https://github.com/jimhigson/simple-barrier"
+}
