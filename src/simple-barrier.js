@@ -27,13 +27,13 @@ module.exports = function simpleBarrier() {
 
             if( requiredCallbacks === doneCallbacks ) {
                instance.duration = Date.now() - startTime;
-               instance.finally(results);
+               instance.endWithCallback(results);
             }
          }
       },
       
-      finally: function(fn) {
-         instance.finally = fn;
+      endWith: function(fn) {
+         instance.endWithCallback = fn;
       }
    };
 

@@ -1,6 +1,6 @@
 {
   "name": "simple-barrier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An ultra-simple implementation of the Barrier flow control pattern in Javascript",
   "main": "src/simple-barrier.js",
   "scripts": {

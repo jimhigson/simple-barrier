@@ -25,7 +25,7 @@ fs.readFile('bar.txt', barrier.waitOn());
 fs.readFile('baz.txt', barrier.waitOn());
 
 // add a callback for when all files are loaded
-fs.finally(function( results ){
+barrier.endWith(function( results ){
    
    // Results is an array of the values given by fs.readFile
    // the array is in the order that barrier.waitOn() was called, regardless of the 
@@ -51,7 +51,7 @@ function extractUsefulPart (err, data){
    // err, data are the standard arguments from request
 
    if( !err ){
-      // the value we return will be added to the result array passed to the .finally
+      // the value we return will be added to the result array passed to the .endWith
       // callback. Here, we extract one small part of the whole JSON:
       return JSON.parse(data).usefulBit;
    }
@@ -61,7 +61,7 @@ function extractUsefulPart (err, data){
 request('http://example.com/foo.json', barrier.waitOn( extractUsefulPart ));
 request('http://example.com/baz.json', barrier.waitOn( extractUsefulPart ));
 
-fs.finally(function( usefulBits ){
+barrier.endWith(function( usefulBits ){
    usefulBits.forEach(function( bit ){
       console.log(bit + ' is useful');
    });
