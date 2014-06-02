@@ -1,7 +1,7 @@
 {
   "name": "simple-barrier",
-  "version": "1.0.2",
-  "description": "An ultra-simple implementation of the Barrier flow control pattern in Javascript",
+  "version": "1.0.3",
+  "description": "A very minimalist, callback-based implementation of the Barrier flow control pattern in Javascript",
   "main": "src/simple-barrier.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
