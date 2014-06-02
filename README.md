@@ -8,6 +8,15 @@ then handle the results all together.
 
 For people too lazy to learn [async](https://github.com/caolan/async).
 
+Installing
+----------
+
+The usual.
+
+```
+npm install --save simple-barrier
+```
+
 Waiting for several async tasks
 -------------------------------
 
