@@ -87,9 +87,15 @@ var barrier = simpleBarrier();
 
 // barrier expects the data to be the second argument (as per Node's errback convention)
 // so we explicitly return the data param.
+function useFirstArg(data){
+    return data;
+}
 
-$.ajax({url:'people/steven.json'}).done(barrier.waitOn(function(data){return data}));
-$.ajax({url:'people/jim.json'}).done(barrier.waitOn(function(data){return data}));
+$.ajax({url:'people/steven.json'})
+    .done(barrier.waitOn(useFirstArg));
+    
+$.ajax({url:'people/jim.json'})
+    .done(barrier.waitOn(useFirstArg));
 
 barrier.endWith(function( results ){
     console.log('all ajax requests returned', results);
