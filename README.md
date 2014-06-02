@@ -76,3 +76,25 @@ barrier.endWith(function( usefulBits ){
    });
 });
 ```
+
+In the browser
+--------------
+
+Simple-barrier was written for node but it is happy in the browser as well:
+
+```js
+var barrier = simpleBarrier();
+
+// barrier expects the data to be the second argument (as per Node's errback convention)
+// so we explicitly return the data param.
+
+$.ajax({url:'people/steven.json'}).done(barrier.waitOn(function(data){return data}));
+$.ajax({url:'people/jim.json'}).done(barrier.waitOn(function(data){return data}));
+
+barrier.endWith(function( results ){
+    console.log('all ajax requests returned', results);
+});
+```
+
+
+
