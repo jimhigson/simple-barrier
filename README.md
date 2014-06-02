@@ -1,7 +1,7 @@
 simple-barrier
 ==============
 
-A very minimalist, callback-based implementation of the Barrier flow control pattern in Javascript
+A very minimalist, callback-based implementation of the Barrier flow control pattern in Javascript. Fine in Node or the browser.
 
 This is useful for when you want to wait for several things to execute in parallel,
 then handle the results together.
