@@ -31,9 +31,17 @@ module.exports = function simpleBarrier() {
             }
          }
       },
-      
+
       endWith: function(fn) {
          instance.endWithCallback = fn;
+      },
+      
+      getRequiredCallbacks: function() {
+      	 return requiredCallbacks;
+      },
+      
+      getDoneCallbacks: function() {
+      	 return doneCallbacks;
       }
    };
 
